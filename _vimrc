@@ -1,63 +1,58 @@
-" -------------------------------
-" NeoBundle
-" -------------------------------
-if has('vim_starting')
-  if &compatible
-    set nocompatible
-  endif
-
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
+if &compatible
+ set nocompatible
 endif
+" Add the dein installation directory into runtimepath
+set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 
-call neobundle#begin(expand('~/.vim/bundle'))
+if dein#load_state('~/.cache/dein')
+ call dein#begin('~/.cache/dein')
 
-NeoBundleFetch 'Shougo/neobundle.vim'
+ call dein#add('Shougo/dein.vim')
 
-" コード補完
-NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'marcus/rsense'
-"NeoBundle 'supermomonga/neocomplete-rsense.vim'
-NeoBundle 'Shougo/neocomplcache-rsense'
+ " コード補完
+ call dein#add('Shougo/neocomplete.vim')
+ call dein#add('marcus/rsense')
+ call dein#add('Shougo/neocomplcache-rsense')
 
-" 静的解析
-NeoBundle 'scrooloose/syntastic'
+ " 静的解析
+ call dein#add('scrooloose/syntastic')
 
-" ドキュメント参照
-NeoBundle 'thinca/vim-ref'
-NeoBundle 'yuku-t/vim-ref-ri'
+ " ドキュメント参照
+ call dein#add('thinca/vim-ref')
+ call dein#add('yuku-t/vim-ref-ri')
 
-" メソッド定義元へのジャンプ
-NeoBundle 'szw/vim-tags'
+ " メソッド定義元へのジャンプ
+ call dein#add('szw/vim-tags')
 
-" 自動で閉じる
-NeoBundle 'tpope/vim-endwise'
+ " 自動で閉じる
+ call dein#add('tpope/vim-endwise')
 
-" 追記
-NeoBundle 'gitv'
-NeoBundle 'nanotech/jellybeans.vim'
-NeoBundle 'ctrlpvim/ctrlp.vim'
-NeoBundle 'slim-template/vim-slim.git'
+ " 追記
+ call dein#add('"vim-scripts/gitv')
+ call dein#add('nanotech/jellybeans.vim')
+ call dein#add('ctrlpvim/ctrlp.vim')
+ call dein#add('slim-template/vim-slim.git')
 
-" Nerdtree
-NeoBundle 'scrooloose/nerdtree'
+ " Nerdtree
+ call dein#add('scrooloose/nerdtree')
 
-" ファイルオープンを便利に
-NeoBundle 'Shougo/unite.vim'
-" Unite.vimで最近使ったファイルを表示できるようにする
-NeoBundle 'Shougo/neomru.vim'
+ " ファイルオープンを便利に
+ call dein#add('Shougo/unite.vim')
+ " Unite.vimで最近使ったファイルを表示できるようにする
+ call dein#add('Shougo/neomru.vim')
 
-" インデントに色を付けて見やすくする
-NeoBundle 'nathanaelkane/vim-indent-guides'
+ " インデントに色を付けて見やすくする
+ call dein#add('nathanaelkane/vim-indent-guides')
 
-" TypeScript
-NeoBundle 'leafgarland/typescript-vim'
+ " TypeScript
+ call dein#add('leafgarland/typescript-vim')
 
-" Gitを便利に使う
-NeoBundle 'tpope/vim-fugitive'
+ " Gitを便利に使う
+ call dein#add('tpope/vim-fugitive')
 
-call neobundle#end()
-
-NeoBundleCheck
+ call dein#end()
+ call dein#save_state()
+endif
 
 " -------------------------------
 " Rsense
