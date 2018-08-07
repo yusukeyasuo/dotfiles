@@ -137,7 +137,7 @@ set cursorcolumn
 "highlight CursorColumn term=reverse cterm=reverse
 set number
 set hlsearch
-set paste
+set nopaste
 set list
 set listchars=tab:>-,trail:-
 set expandtab
