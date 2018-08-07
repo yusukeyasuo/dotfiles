@@ -28,7 +28,7 @@ if dein#load_state('~/.cache/dein')
  call dein#add('tpope/vim-endwise')
 
  " 追記
- call dein#add('"vim-scripts/gitv')
+ call dein#add('vim-scripts/gitv')
  call dein#add('nanotech/jellybeans.vim')
  call dein#add('ctrlpvim/ctrlp.vim')
  call dein#add('slim-template/vim-slim.git')
