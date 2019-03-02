@@ -159,9 +159,6 @@ set re=1
 " grep検索の実行後にQuickFix Listを表示する
 autocmd QuickFixCmdPost *grep* cwindow
 
-" ステータス行に現在のgitブランチを表示する
-set statusline+=%{fugitive#statusline()}
-
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
 " vim-coffee-script用の設定
