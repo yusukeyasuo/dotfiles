@@ -29,7 +29,6 @@ if dein#load_state('~/.cache/dein')
 
  " 追記
  call dein#add('vim-scripts/gitv')
- call dein#add('nanotech/jellybeans.vim')
  call dein#add('ctrlpvim/ctrlp.vim')
  call dein#add('slim-template/vim-slim.git')
  call dein#add('kchmck/vim-coffee-script')
@@ -117,15 +116,18 @@ let g:neobundle#log_filename = $HOME . "/neobundle.log"
 
 "追記
 "Plugin  'gitv'
-"Plugin 'nanotech/jellybeans.vim'
 "Plugin 'ctrlpvim/ctrlp.vim'
 "Plugin 'slim-template/vim-slim.git'
 
 
 "追記
 syntax on 
-colorscheme jellybeans
 setlocal tabstop=2 softtabstop=2 shiftwidth=2
+set background=dark
+colorscheme hybrid
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 augroup fileTypeIndent
     autocmd!
     autocmd BufNewFile,BufRead *.rb setlocal tabstop=2 softtabstop=2 shiftwidth=2
